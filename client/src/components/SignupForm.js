@@ -52,57 +52,62 @@ const SignupForm = () => {
   return (
     <>
       {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+        {/* <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
-        </Alert>
+        </Alert> */}
 
-        <Form.Group>
-          <Form.Label htmlFor='username'>Username</Form.Label>
-          <Form.Control
+        <div>
+        <i className="material-icons prefix">account_circle</i>
+          <label htmlFor='username'>Username</label>
+          <input
             type='text'
-            placeholder='Your username'
+            //placeholder='Your username'
             name='username'
             onChange={handleInputChange}
             value={userFormData.username}
             required
           />
-          <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
-        </Form.Group>
+          {/* <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback> */}
+        </div>
 
-        <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
-          <Form.Control
+        <div>
+        <i className="material-icons prefix">mail</i>
+          <label htmlFor='email'>Email</label>
+          <input
             type='email'
-            placeholder='Your email address'
+           // placeholder='Your email address'
             name='email'
             onChange={handleInputChange}
             value={userFormData.email}
             required
           />
-          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
-        </Form.Group>
+          {/* <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback> */}
+        </div>
 
-        <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
-          <Form.Control
+        <div>
+        <i className="material-icons prefix">vpn_key</i>
+          <label htmlFor='password'>Password</label>
+          <input
             type='password'
-            placeholder='Your password'
+           // placeholder='Your password'
             name='password'
             onChange={handleInputChange}
             value={userFormData.password}
             required
           />
-          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
-        </Form.Group>
-        <Button
-          disabled={!(userFormData.username && userFormData.email && userFormData.password)}
-          type='submit'
-          variant='success'>
-          Submit
-        </Button>
-      </Form>
+          {/* <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback> */}
+        </div>
+        <button class="btn waves-effect waves-light" 
+        type="submit" 
+        variant='success'
+        disabled={!(userFormData.username && userFormData.email && userFormData.password)}
+        name="action">
+        Submit
+        <i class="material-icons right">send</i>
+        </button>
+      </form>
     </>
   );
 };
