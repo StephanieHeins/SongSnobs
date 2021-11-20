@@ -1,5 +1,3 @@
-//TODO remake this whole file for the SONGSNOBS app instead of the BOOK app.
-
 // import user model
 const { User } = require('../models');
 // import sign token function from auth
