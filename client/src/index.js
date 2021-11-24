@@ -5,8 +5,8 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-  // <React>
+  <React>
     <App />,
-  /* </React>, */
+  </React>,
   document.getElementById('root')
 );
