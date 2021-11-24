@@ -13,7 +13,6 @@ const songSchema = new Schema({
     minlength: 1,
     trim: true,
   },
-  // saved book id from GoogleBooks
   image: {
     type: String,
   },

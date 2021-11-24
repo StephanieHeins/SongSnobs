@@ -29,28 +29,28 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        saveBook: async (parent,  book , context) => {
-            if (context.user) {
-                const updatedUser = await User.findOneAndUpdate(
-                    { _id: context.user._id },
-                    { $addToSet: { savedBooks: book.input} },
-                    { new: true }
-                );
-                return updatedUser;
-            }
-            throw new AuthenticationError('You need to be logged in!');
-        },
-        removeBook: async (parent, args, context) => {
-            if (context.user) {
-            return User.findOneAndUpdate(
-                { _id: context.user._id },
-                { $pull: {savedBooks : { bookId : args.bookId } } },
-                { new: true }
-            );
+        // saveBook: async (parent,  book , context) => {
+        //     if (context.user) {
+        //         const updatedUser = await User.findOneAndUpdate(
+        //             { _id: context.user._id },
+        //             { $addToSet: { savedBooks: book.input} },
+        //             { new: true }
+        //         );
+        //         return updatedUser;
+        //     }
+        //     throw new AuthenticationError('You need to be logged in!');
+        // },
+        // removeBook: async (parent, args, context) => {
+        //     if (context.user) {
+        //     return User.findOneAndUpdate(
+        //         { _id: context.user._id },
+        //         { $pull: {savedBooks : { bookId : args.bookId } } },
+        //         { new: true }
+        //     );
 
-            }
-            throw new AuthenticationError('You need to be logged in!');
-        },
+        //     }
+        //     throw new AuthenticationError('You need to be logged in!');
+        // },
     },
 }
 

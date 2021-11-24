@@ -11,8 +11,9 @@ const typeDefs = gql`
         addSong(songText: String!): Song
         addComment(songId: ID!, commentText: String!): Song
         removeSong(songId: String): Song
-        removeComment(songId: ID!, commentId: ID!) Song
+        removeComment(songId: ID!, commentId: ID!): Song
     }
+
     type User {
         _id: ID
         username: String!
@@ -42,14 +43,16 @@ const typeDefs = gql`
         user: User
     }
 
-    input BookInput {
-        bookId: String!
-        authors: [String]
-        description: String
-        title: String!
-        image: String
-        link: String
-    }
 `
 
 module.exports = typeDefs;
+
+// Commenting out the BookInput incase we need something similar for later.
+    // input BookInput {
+    //     bookId: String!
+    //     authors: [String]
+    //     description: String
+    //     title: String!
+    //     image: String
+    //     link: String
+    // }
