@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import testimage from '../../../testfiles/testimage.jpeg'
-import 'materialize-css/dist/css/materialize.min.css'
 
 const SongCard = () => {
     return (
