@@ -17,15 +17,12 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@apollo/client": "^3.4.17",
     "apollo-server-core": "^2.19.0",
     "apollo-server-express": "^2.19.0",
     "express": "^4.17.1",
     "graphql": "^15.7.2",
-    "jsonwebtoken": "^8.5.1"
-=======
+    "jsonwebtoken": "^8.5.1",
     "materialize-css": "^1.0.0-rc.2"
->>>>>>> postSongForm
   }
 }
