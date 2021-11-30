@@ -11,12 +11,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import SearchBooks from './pages/SearchBooks';
 // import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
-<<<<<<< HEAD
 import { PostSong } from './components/PostSong';
 import LoginForm from './components/LoginForm';
-=======
 import Footer from './components/Footer';
->>>>>>> StephBranch
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,18 +39,6 @@ const client = new ApolloClient({
 
 function App() {
   return (
-<<<<<<< HEAD
-    <Router>
-      <>
-        <Navbar />
-        <Switch>
-          <Route exact path='/' component={LoginForm} />
-          <Route exact path='/saved' component={SavedBooks} />
-          <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
-        </Switch>
-      </>
-    </Router>
-=======
     <ApolloProvider client = {client}>
       <Router>
         <>
@@ -67,7 +52,6 @@ function App() {
         </>
       </Router>
     </ApolloProvider>  
->>>>>>> StephBranch
   );
 }
 
