@@ -9,12 +9,8 @@
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
     "jwt-decode": "^2.2.0",
-<<<<<<< HEAD
-    "materialize-css": "^1.0.0-rc.2",
-=======
     "materialize": "^1.0.0",
     "materialize-css": "^1.0.0",
->>>>>>> StephBranch
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
