@@ -1,6 +1,5 @@
 import React from 'react';
 import testimage from '../../../testfiles/testimage.jpeg'
-import 'materialize-css/dist/css/materialize.min.css'
 
 const SongInfo = () => {
     return (

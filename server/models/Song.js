@@ -23,6 +23,7 @@ const songSchema = new Schema({
   },
   comments: [
     {
+      /*
       commentText: {
         type: String,
         required: true,
@@ -37,11 +38,16 @@ const songSchema = new Schema({
         default: Date.now,
         get: (timestamp => dateFormat(timeStamp)),
       },
+      */
+     // Utilizing comment schema already created in Comment.js model
+     type: Schema.Types.ObjectId,
+      ref: "Comment"
     },
   ],
 });
 
 
-const Song = model('Song', songSchema)
+// const Song = model('Song', songSchema)
 
-module.exports = Song;
+
+module.exports = songSchema;
